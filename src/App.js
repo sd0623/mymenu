@@ -5,10 +5,10 @@ import React from 'react';
 import {Route, Routes, Link } from 'react-router-dom';
 
 
-import Home from "./pages/home";
-import Admin from "./pages/admin";
-import Like from "./pages/like";
-import Account from "./pages/account";
+import Home from "./pages/Home";
+import Admin from "./pages/Admin";
+import Like from "./pages/Like";
+import Account from "./pages/Account";
 // import Routes from "./Routes";
 
 function App() {

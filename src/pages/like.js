@@ -1,4 +1,3 @@
-
 const Like = () => {
     return (
         <section>
