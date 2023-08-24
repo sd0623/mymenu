@@ -6,13 +6,17 @@ import Admin from "./pages/Admin";
 import Like from "./pages/Like";
 import Account from "./pages/Account";
 
+import light_logo from "./assests/light_color.png";
+
 function NavBar() {
     return ( 
       <BrowserRouter>
       <>
       <Navbar bg="dark" data-bs-theme="dark">
         <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+          <Navbar.Brand href="#home">
+            <img src={light_logo} alt="logo" />
+          </Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             <Nav.Link as={Link} to="/like">Liked</Nav.Link>
