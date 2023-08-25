@@ -1,10 +1,10 @@
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { Route, Routes, Link, BrowserRouter } from 'react-router-dom';
 
-import Home from "./Home";
-import Admin from "./Admin";
-import Like from "./Like";
-import Account from "./Account";
+import Home from "./Home1";
+import Admin from "./Admin1";
+import Like from "./Like1";
+import Account from "./Account1";
 
 import '../style/NavBar.css';
 
