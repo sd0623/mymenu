@@ -59,8 +59,10 @@
     opacity: 1;
 }
 
-.nav-items .nav-link .active {
-    background-color: red;
+.nav-items .nav-link.active{
+    font-weight: 600;
+    color: #D6CDB8;
+    content: '';
 }
 
 

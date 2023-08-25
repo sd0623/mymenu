@@ -12,7 +12,11 @@ import light_logo from "../assests/light_color.png";
 import { useState } from 'react';
 
 export const NavBar = () => {
-  
+    const [activeLink, setActiveLink] = useState('home');
+
+    const onUpdateActiveLink = (value) => {
+      setActiveLink(value);
+    }
     return ( 
       <BrowserRouter>
       <>
@@ -26,9 +30,9 @@ export const NavBar = () => {
             </Nav.Link>
           </Navbar.Brand>
           <Nav className="nav-items">
-            <Nav.Link as={Link} to="/" className={({ isActive }) => (isActive ? 'active' : 'nav-link')}>Home</Nav.Link>
-            <Nav.Link as={Link} to="/like" className={({ isActive }) => (isActive ? 'active' : 'nav-link')}>Liked</Nav.Link>
-            <Nav.Link as={Link} to="/account" className={({ isActive }) => (isActive ? 'active' : 'nav-link')}>Account</Nav.Link>
+            <Nav.Link as={Link} to="/" className={activeLink === 'home' ? 'active nav-link' : 'nav-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
+            <Nav.Link as={Link} to="/like" className={activeLink === 'liked' ? 'active nav-link' : 'nav-link'} onClick={() => onUpdateActiveLink('liked')}>Liked</Nav.Link>
+            <Nav.Link as={Link} to="/account" className={activeLink === 'account' ? 'active nav-link' : 'nav-link'} onClick={() => onUpdateActiveLink('account')}>Account</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
